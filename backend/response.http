@@ -1,0 +1,55 @@
+POST http://localhost:5000/api/user/create-user
+Content-Type: application/json
+
+{
+  "name":"abcxyz",
+  "email":"hiepnt1@funix.edu.vn",
+  "password":"12345678",
+  "avatar":"redfox-1687834712714.png"
+}
+
+###
+POST http://localhost:5000/api/user/activation/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiT21uaWZvb2QiLCJlbWFpbCI6ImhpZXBudDFAZnVuaXguZWR1LnZuIiwicGFzc3dvcmQiOiIxMjM0NSIsImF2YXRhciI6Imh0dHA6Ly9yZXMuY2xvdWRpbmFyeS5jb20vZG13bDBwdTNqL2ltYWdlL3VwbG9hZC92MTY4OTA3MDE1MC91cGxvYWQvZ2hpc2NjM2h5MHZlaXdteGRub20ucG5nIiwiaWF0IjoxNjg5MDcwMTUxLCJleHAiOjE2ODkwNzM3NTF9.f8wjJ4q13DF_ANHYTg58YQ_Bi0-t8IJh0bd2JG8e3qM
+
+### 
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+  "email":"hiepnt1@funix.edu.vn",
+  "password":"123456789"
+}
+
+###
+GET http://localhost:5000/api/user/getUser
+Content-Type: application/json
+
+###
+POST http://localhost:5000/api/admin/login
+Content-Type: application/json
+
+{
+  "email":"hiepnt1@funix.edu.vn",
+  "password":"456"
+}
+
+###
+GET http://localhost:5000/api/product/all-product
+
+###
+GET http://localhost:5000/api/product/64f76da39093f53305065bc4
+
+###
+GET http://localhost:5000/api/order/orderUser
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWViN2FhZmRmNjUxYWQwN2U5YjRlYiIsImlhdCI6MTY5NDA3Mzk1MiwiZXhwIjoxNjk0Njc4NzUyfQ.Bhmi1JHIbvQpT52zMGc9ar92FneeIKF2nvAXUnn-Pe4
+
+###
+GET http://localhost:5000/api/order
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZWViN2FhZmRmNjUxYWQwN2U5YjRlYiIsImlzQWRtaW4iOiJhZG1pbiIsImlhdCI6MTY5NDE1NDgxMH0.Wf4PdoKUs9nATLIGWJ73ped1mZls4WOYg8M1vUbsffE
+
+###
+GET http://localhost:5000/api/user
+
+###
+PATCH http://localhost:5000/api/product/updateQuantity/64f77145d203bb4734f82f8e?quantity=4
+Content-Type: application/json

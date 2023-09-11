@@ -1,0 +1,117 @@
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+
+@layer base {
+  body {
+    @apply font-montserrat;
+  }
+
+  th {
+    @apply py-3 w-[21%];
+  }
+
+  td {
+    @apply p-1;
+  }
+}
+
+@layer components {
+  .container {
+    @apply w-[78%] m-auto mt-20;
+  }
+  .navbar {
+    @apply flex w-full bg-white h-20 text-black items-center font-semibold top-0;
+  }
+
+  .scrolled {
+    @apply flex w-full items-center font-semibold bg-black h-20 text-white sticky top-0 z-50;
+  }
+
+  .link {
+    @apply hover:text-orange-600;
+  }
+
+  .title-navbar {
+    @apply text-3xl uppercase hover:scale-105 duration-200 ease-in;
+  }
+
+  .icon-navbar {
+    @apply mr-3 flex justify-between items-center text-[16px];
+  }
+
+  .footer {
+    @apply bg-black text-yellow-50 flex justify-around py-8 h-auto;
+  }
+
+  .title-footer {
+    @apply text-yellow-50 uppercase;
+  }
+
+  ul {
+    @apply mt-3;
+  }
+
+  li {
+    @apply text-xs text-gray-500 pt-2;
+  }
+
+  .box-title {
+    @apply uppercase text-center mb-5;
+  }
+  .text-main-title {
+    @apply font-bold [word-spacing:5px] tracking-widest;
+  }
+
+  .text-seconds-title {
+    @apply text-xs text-gray-400 tracking-widest;
+  }
+
+  .block-grid-categories {
+    @apply grid grid-cols-5 mb-2;
+  }
+
+  .border-element {
+    @apply border-2 border-slate-300 p-2;
+  }
+
+  .main-category {
+    @apply text-white bg-black font-bold text-xl p-2 tracking-widest;
+  }
+
+  .sub-category {
+    @apply text-gray-400 text-sm font-semibold py-2 px-3 tracking-widest cursor-pointer;
+  }
+
+  .n-category {
+    @apply bg-slate-300 text-black uppercase font-semibold tracking-widest text-sm py-2 px-3;
+  }
+
+  .btn-pagination {
+    @apply border-2 border-black p-2 font-semibold text-white bg-black;
+  }
+
+  .titleDetail {
+    @apply text-black font-bold text-3xl p-2 tracking-widest;
+  }
+
+  .img-detail {
+    @apply w-[80px] h-[80px];
+  }
+
+  .inputSignUp {
+    @apply h-[45px] shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none;
+  }
+
+  .btnSign {
+    @apply h-[45px] shadow appearance-none border bg-slate-500 text-xl rounded w-full py-2 px-3 text-white leading-tight focus:outline-none;
+  }
+
+  .banner {
+    @apply bg-[url('./asset/banner1.jpg')] bg-repeat bg-center;
+  }
+
+  .hoverLogout {
+    @apply hover:absolute hover:flex hover:flex-col;
+  }
+}

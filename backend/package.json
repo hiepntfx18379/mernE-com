@@ -1,0 +1,37 @@
+{
+  "name": "e-com-app",
+  "version": "1.0.0",
+  "author": "Hiep-Full-Stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon backend/server.js",
+    "start": "node backend/server.js"
+  },
+  "keywords": [
+    "e-commerce",
+    "mern-app",
+    "fulll-stack"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "express-handlebars": "^7.1.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.3.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.3",
+    "nodemailer-express-handlebars": "^6.1.0",
+    "nodemon": "^2.0.22",
+    "node": "^20.2.0"
+  },
+  "engines": {
+    "node": ">=20 <21"
+  }
+}
