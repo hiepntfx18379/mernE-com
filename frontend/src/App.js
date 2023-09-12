@@ -25,6 +25,28 @@ import ChangePassword from "./components/layout/profile/ChangePassword";
 import AllProduct from "./components/layout/body/product/AllProduct";
 import CartDetail from "./components/cartDetail/CartDetail";
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyA-BB0p5FEwSer0F7I54lBKpz7E1N_bTeQ",
+  authDomain: "e-com-f8e2e.firebaseapp.com",
+  projectId: "e-com-f8e2e",
+  storageBucket: "e-com-f8e2e.appspot.com",
+  messagingSenderId: "1025008320721",
+  appId: "1:1025008320721:web:818ed4007df9735d7705f0",
+  measurementId: "G-SDSKPQRB8B",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 function App() {
   const user = useSelector(userSelector);
   return (
