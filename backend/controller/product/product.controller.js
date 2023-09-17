@@ -23,7 +23,6 @@ const getAllProduct = async (req, res, next) => {
 
 const findProduct = async (req, res) => {
   const product = await productModel.findById(req.params.id);
-
   res.status(200).json(product);
 };
 

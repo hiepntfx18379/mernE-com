@@ -34,10 +34,10 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:5000/api/product/all-product
+GET http://localhost:5000/api/product
 
 ###
-GET http://localhost:5000/api/product/64f76da39093f53305065bc4
+GET http://localhost:5000/api/product/find/64f77145d203bb4734f82f8e
 
 ###
 GET http://localhost:5000/api/order/orderUser
