@@ -33,7 +33,7 @@ const login = async (req, res, next) => {
     const accessToken = jwt.sign(
       {
         id: user._id,
-        isAdmin: user.role,
+        isAdmin: user.role === "admin" ? true : false,
       },
       process.env.JWT_SECRET_KEY,
     );

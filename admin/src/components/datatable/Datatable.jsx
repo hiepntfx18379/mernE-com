@@ -24,8 +24,6 @@ const Datatable = ({ columns }) => {
     }
   }, [text, data, path]);
 
-  console.log(data);
-
   const handleDelete = async (id) => {
     if (window.confirm("Do u want delete?")) {
       await axios.delete(`${path}/delete/${id}`);

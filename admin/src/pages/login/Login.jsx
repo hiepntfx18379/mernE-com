@@ -21,7 +21,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await axios.post("admin/login", userLogin);
-      if (res.data.role) {
+      if (res.data.role === "admin") {
         dispatch({ type: "login_ss", payload: res.data.details });
         navigate("/");
       } else {

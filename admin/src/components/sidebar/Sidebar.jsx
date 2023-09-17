@@ -1,15 +1,21 @@
 import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import CreditCardIcon from "@mui/icons-material/CreditCard";
 import StoreIcon from "@mui/icons-material/Store";
 import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const { dispatch } = useContext(DarkModeContext);
+  const navigate = useNavigate();
+  const clickLogout = () => {
+    dispatch({ type: "logout", payload: null });
+    navigate("/login");
+    window.location.reload();
+  };
   return (
     <div className="sidebar">
       <div className="top">
@@ -49,12 +55,12 @@ const Sidebar = () => {
           </Link>
 
           <p className="title">USER</p>
-          <Link to="/login" style={{ textDecoration: "none" }}>
+          <div onClick={clickLogout} style={{ textDecoration: "none" }}>
             <li>
               <ExitToAppIcon className="icon" />
               <span>Logout</span>
             </li>
-          </Link>
+          </div>
         </ul>
       </div>
       <div className="bottom">
