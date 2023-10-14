@@ -33,7 +33,10 @@ const UpdateRoom = ({ title }) => {
     };
 
     try {
-      await axios.put(`/rooms/update/${param.id}`, newRoom);
+      await axios.put(
+        `https://ecomserver-9b4w.onrender.com/api/rooms/update/${param.id}`,
+        newRoom,
+      );
       navigate("/rooms");
     } catch (err) {
       console.log(err);

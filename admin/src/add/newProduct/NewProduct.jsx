@@ -41,7 +41,10 @@ const NewProduct = ({ title }) => {
         photos: list,
       };
 
-      await axios.post("/product/create-product", newPro);
+      await axios.post(
+        "https://ecomserver-9b4w.onrender.com/api/product/create-product",
+        newPro,
+      );
       toast.success("Added new product");
       navigate("/product");
     } catch (err) {

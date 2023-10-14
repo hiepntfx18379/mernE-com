@@ -13,7 +13,10 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/user/forgotPassword", { email });
+      await axios.post(
+        "https://ecomserver-9b4w.onrender.com/api/user/forgotPassword",
+        { email },
+      );
       toast.success("Please check your email");
       navigate("/verify");
     } catch (err) {

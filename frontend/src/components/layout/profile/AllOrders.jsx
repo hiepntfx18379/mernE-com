@@ -18,7 +18,9 @@ const AllOrders = () => {
 
   useEffect(() => {
     const getAllOrder = async () => {
-      const res = await axios.get("/order/orderUser");
+      const res = await axios.get(
+        "https://ecomserver-9b4w.onrender.com/api/order/orderUser",
+      );
 
       dispatch(orderSlice.actions.allOrder({ all: res.data.orderOfUser }));
     };

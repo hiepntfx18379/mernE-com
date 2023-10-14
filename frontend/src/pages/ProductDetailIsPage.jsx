@@ -10,7 +10,9 @@ const ProductDetailIsPage = () => {
 
   useEffect(() => {
     async function getDataProduct() {
-      const res = await axios("/product");
+      const res = await axios(
+        "https://ecomserver-9b4w.onrender.com/api/product",
+      );
       const getPro = res.data.find((x) => x.name === name);
       const list = res.data.filter(
         (x) => x.category === getPro.category && x.name !== name,

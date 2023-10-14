@@ -10,13 +10,15 @@ const Deals = () => {
 
   useEffect(() => {
     async function getDataProduct() {
-      const res = await axios.get("/product/");
+      const res = await axios.get(
+        "https://ecomserver-9b4w.onrender.com/api/product/",
+      );
       setProduct(res.data);
       dispatch(productSlice.actions.listDataProducts(res.data));
     }
 
     getDataProduct();
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="container ">

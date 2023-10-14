@@ -30,7 +30,10 @@ const Checkout = () => {
       listOrder,
       cost: cost + 30000,
     };
-    await axios.post("/order/verify", infoOrder);
+    await axios.post(
+      "https://ecomserver-9b4w.onrender.com/api/order/verify",
+      infoOrder,
+    );
     dispatch(orderSlice.actions.refeshCart([]));
     toast.success("Order successfully");
   };

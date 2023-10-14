@@ -36,12 +36,16 @@ export const userSlice = createSlice({
  */
 
 export const getUser = createAsyncThunk("user/getUser", async () => {
-  const res = await axios.get("/user/getUser");
+  const res = await axios.get(
+    "https://ecomserver-9b4w.onrender.com/api/user/getUser",
+  );
   return res.data;
 });
 
 export const logout = createAsyncThunk("user/logout", async () => {
-  const res = await axios.get("/user/logout");
+  const res = await axios.get(
+    "https://ecomserver-9b4w.onrender.com/api/user/logout",
+  );
   return res.data;
 });
 
@@ -49,10 +53,13 @@ export const changePassword = createAsyncThunk(
   "user/changePassword",
   async ({ oldPassword, newPassword }) => {
     try {
-      const res = await axios.patch("/user/changePassword", {
-        oldPassword,
-        newPassword,
-      });
+      const res = await axios.patch(
+        "https://ecomserver-9b4w.onrender.com/api/user/changePassword",
+        {
+          oldPassword,
+          newPassword,
+        },
+      );
       return res.data;
     } catch {}
   },

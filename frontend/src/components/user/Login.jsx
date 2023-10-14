@@ -17,12 +17,17 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/user/login", { email, password }).then((res) => {
-        const { name, email, avatar } = res.data.user;
-        dispatch(userSlice.actions.setUser({ name, email, avatar }));
-        toast.success(res.data.message);
-        navigate("/");
-      });
+      await axios
+        .post("https://ecomserver-9b4w.onrender.com/api/user/login", {
+          email,
+          password,
+        })
+        .then((res) => {
+          const { name, email, avatar } = res.data.user;
+          dispatch(userSlice.actions.setUser({ name, email, avatar }));
+          toast.success(res.data.message);
+          navigate("/");
+        });
     } catch (err) {
       toast.error(err.response.data.message);
     }

@@ -7,11 +7,10 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { productInputs } from "../../formSource";
 import useFetch from "../../hookCustome/fetchData";
-import { BsArrowRight } from "react-icons/bs";
 
 const UpdateProduct = ({ title }) => {
   const param = useParams();
-  const { data } = useFetch(`/product/${param.id}`);
+  const { data } = useFetch(`/product/find/${param.id}`);
   const [file, setFile] = useState("");
   const [info, setInfo] = useState(data);
   const navigate = useNavigate();
@@ -46,7 +45,10 @@ const UpdateProduct = ({ title }) => {
       updateProduct.photos = list;
     }
 
-    await axios.patch(`/product/update/${param.id}`, updateProduct);
+    await axios.patch(
+      `https://ecomserver-9b4w.onrender.com/api/product/update/${param.id}`,
+      updateProduct,
+    );
 
     navigate("/product");
   };

@@ -23,7 +23,10 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("user/create-user", { name, email, password, avatar });
+      await axios.post(
+        "https://ecomserver-9b4w.onrender.com/api/user/create-user",
+        { name, email, password, avatar },
+      );
       toast.success("Please verify in your email");
       setName("");
       setAvatar("");

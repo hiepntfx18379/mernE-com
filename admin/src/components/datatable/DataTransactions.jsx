@@ -6,7 +6,9 @@ import { Button } from "@mui/material";
 import PopupOrderDetail from "./PopupOrderDetail";
 
 const DatatableTransaction = ({ columns }) => {
-  const { data, reFetch } = useFetch(`/order`);
+  const { data, reFetch } = useFetch(
+    `https://ecomserver-9b4w.onrender.com/api/order`,
+  );
   const [open, setOpen] = useState(false);
   const [pro, setPro] = useState("");
 

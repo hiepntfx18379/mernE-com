@@ -5,7 +5,7 @@ import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUpload
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { FormControlLabel, FormLabel, Radio, RadioGroup } from "@mui/material";
+import { FormControlLabel, Radio, RadioGroup } from "@mui/material";
 
 const New = ({ inputs, title }) => {
   const [file, setFile] = useState("");
@@ -36,7 +36,10 @@ const New = ({ inputs, title }) => {
         role,
       };
 
-      await axios.post("/admin/create-user", newUser);
+      await axios.post(
+        "https://ecomserver-9b4w.onrender.com/api/admin/create-user",
+        newUser,
+      );
       navigate("/user");
     } catch (err) {
       console.log(err);

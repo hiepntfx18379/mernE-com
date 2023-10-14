@@ -1,6 +1,5 @@
 import "./datatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
-import { userColumns, userRows } from "../../datatablesource";
 import { Link, Navigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import useFetch from "../../hookCustome/fetchData";
@@ -10,7 +9,9 @@ import { Button } from "@mui/material";
 const Datatable = ({ columns }) => {
   const location = useLocation();
   let path = location.pathname.split("/")[1];
-  const { data, reFetch } = useFetch(`${path}`);
+  const { data, reFetch } = useFetch(
+    `https://ecomserver-9b4w.onrender.com/api/${path}`,
+  );
   const [listData, setListData] = useState();
   const [text, setText] = useState("");
 
@@ -26,7 +27,9 @@ const Datatable = ({ columns }) => {
 
   const handleDelete = async (id) => {
     if (window.confirm("Do u want delete?")) {
-      await axios.delete(`${path}/delete/${id}`);
+      await axios.delete(
+        `https://ecomserver-9b4w.onrender.com/api/${path}/delete/${id}`,
+      );
       setListData(reFetch());
     }
   };

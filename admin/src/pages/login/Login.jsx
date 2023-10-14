@@ -20,7 +20,10 @@ const Login = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("admin/login", userLogin);
+      const res = await axios.post(
+        "https://ecomserver-9b4w.onrender.com/api/admin/login",
+        userLogin,
+      );
       if (res.data.role === "admin") {
         dispatch({ type: "login_ss", payload: res.data.details });
         navigate("/");

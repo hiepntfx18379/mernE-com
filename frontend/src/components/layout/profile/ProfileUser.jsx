@@ -32,7 +32,7 @@ const ProfileUser = ({ user }) => {
         toast.error("Info is not changed");
       } else {
         await axios
-          .patch("user/updateInfo", {
+          .patch("https://ecomserver-9b4w.onrender.com/api/user/updateInfo", {
             name,
             email,
             avatar,

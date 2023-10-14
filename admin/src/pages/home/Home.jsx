@@ -15,7 +15,9 @@ const Home = () => {
   useEffect(() => {
     async function getAll() {
       try {
-        const response = await axios.get("/order");
+        const response = await axios.get(
+          "https://ecomserver-9b4w.onrender.com/api/order",
+        );
         let money = response.data.reduce(
           (total, item) => total + Number(item.totalPrice),
           0,

@@ -8,7 +8,6 @@ import {
   statusSelector,
   userSelector,
 } from "../../../tookit/selector";
-import axios from "axios";
 
 const ChangePassword = () => {
   const [oldPassword, setOldPassword] = useState("");

@@ -41,7 +41,7 @@ const CartDetail = () => {
       await Promise.all(
         listPro.map(async (it) => {
           await axios.patch(
-            `product/updateQuantity/${it._id}?quantity=${it.quantity}`,
+            `https://ecomserver-9b4w.onrender.com/api/product/updateQuantity/${it._id}?quantity=${it.quantity}`,
           );
         }),
       );

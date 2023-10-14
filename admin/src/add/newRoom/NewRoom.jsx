@@ -32,7 +32,10 @@ const NewRoom = () => {
     };
 
     try {
-      await axios.post(`/rooms/create/${hotelId}`, newRoom);
+      await axios.post(
+        `https://ecomserver-9b4w.onrender.com/api/rooms/create/${hotelId}`,
+        newRoom,
+      );
       navigate("/rooms");
     } catch (err) {
       console.log(err);

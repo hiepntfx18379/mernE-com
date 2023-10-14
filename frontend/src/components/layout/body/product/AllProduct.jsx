@@ -10,7 +10,9 @@ const AllProduct = () => {
 
   useEffect(() => {
     async function getDataProduct() {
-      const res = await axios.get("/product/");
+      const res = await axios.get(
+        "https://ecomserver-9b4w.onrender.com/api/product/",
+      );
 
       if (category === "All") {
         setProduct(res.data);

@@ -52,8 +52,9 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000/api/",
+  "proxy": "https://ecomserver-9b4w.onrender.com/api/",
   "devDependencies": {
-    "firebase-tools": "^12.5.3"
+    "firebase-tools": "^12.6.1",
+    "node": "^20.2.0"
   }
 }

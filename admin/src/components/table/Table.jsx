@@ -17,7 +17,10 @@ const List = () => {
   useEffect(() => {
     async function getLastTransaction() {
       try {
-        const res = await axios.get("/order");
+        const res = await axios.get(
+          "https://ecomserver-9b4w.onrender.com/api/order",
+        );
+        console.log(res.data);
         getRows(res.data);
       } catch (err) {
         console.log(err);

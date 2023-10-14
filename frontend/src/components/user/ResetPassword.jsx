@@ -15,7 +15,10 @@ const ResetPassword = () => {
     e.preventDefault();
     try {
       if (active_token) {
-        await axios.patch(`/user/resetPassword/${active_token}`, { password });
+        await axios.patch(
+          `https://ecomserver-9b4w.onrender.com/api/user/resetPassword/${active_token}`,
+          { password },
+        );
         toast.success("Reset Password Successfully");
         navigate("/login");
       }

@@ -11,7 +11,9 @@ const Activation = () => {
     if (active_token) {
       const activationEmail = async () => {
         await axios
-          .post(`/user/activation/${active_token}`)
+          .post(
+            `https://ecomserver-9b4w.onrender.com/api/user/activation/${active_token}`,
+          )
           .then((res) => console.log(res))
           .catch((err) => {
             setError(true);
